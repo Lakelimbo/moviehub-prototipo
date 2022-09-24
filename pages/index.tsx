@@ -1,5 +1,4 @@
-import type { InferGetServerSidePropsType, NextPage } from "next";
-import { GetServerSideProps } from "next";
+import type { InferGetServerSidePropsType, GetServerSideProps, NextPage } from "next";
 import Head from "next/head";
 
 import LayoutWrapper from "@/components/LayoutWrapper";
