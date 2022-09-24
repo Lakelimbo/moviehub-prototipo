@@ -24,7 +24,7 @@ export const Item = ({ id, quantity }: ItemProps) => {
             setData(data);
             setLoading(false);
          });
-   }, []);
+   }, [id]);
 
    if (isLoading) return <p>Carregando...</p>;
    if (!data) return <p>Nenhum item aqui!</p>;
@@ -67,5 +67,3 @@ export const Item = ({ id, quantity }: ItemProps) => {
       </>
    );
 };
-
-//30afd74ebda9dffa281b3b9016b4aa3c
