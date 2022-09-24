@@ -23,8 +23,7 @@ Outra função do carrinho é que ele mantêm os itens salvos no{" "} `localStor
 ## Checkout
 
 O checkout mostra os itens que o usuário irá comprar e os campos de de informações. Os campos também possuem máscaras para o CPF, CEP e telefone.  
-Caso os campos estejam corretamente preenchidos, o botão de "Finalizar compra" ativará um modal dizendo que a compra foi sucedida. Com isso, o app limpa o `localStorage` e volta para a página inicial.  
-No código desta página pode mostrar algum erro de typechecking. Isto é devido à uma atualização que o plugin de másca dos inputs teve e que, de alguma forma, "bugou" esse check, então na página mostrará como se tivessem 3 erros específicos. Apesar disso, os inputs funcionam normalmente.
+Caso os campos estejam corretamente preenchidos, o botão de "Finalizar compra" ativará um modal dizendo que a compra foi sucedida. Com isso, o app limpa o `localStorage` e volta para a página inicial.
 
 ## Layout e design
 

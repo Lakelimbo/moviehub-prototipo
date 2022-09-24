@@ -1,14 +1,15 @@
 import { useRef, useState, Fragment } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { IMaskInput } from "react-imask";
 import { Listbox, Dialog, Transition } from "@headlessui/react";
-import { MaskElement } from "imask";
 
 import LayoutWrapper from "@/components/LayoutWrapper";
 import { useMovieCart } from "@/context/Cart.context";
 import { Chevron, CheckIcon } from "@/components/Icons";
 import { Item } from "@/components/Item";
+
+// Excelente mask, mas pelo visto só funciona com require ao invés de import.
+const InputMask = require("react-input-mask")
 
 const Dropdown = () => {
    const estado = [
@@ -166,11 +167,6 @@ const Forms = () => {
       );
    };
 
-   // Durante uma atualização da dep. de máscara, alguma coisa no código do plugin
-   // mudou e o typecheck tá meio maluco, mostrando como erro.
-   // Pelo visto já tem fix sendo trabalhado.
-   const ref = useRef<MaskElement>(null);
-   const inputRef = useRef<MaskElement>(null);
    return (
       <form onSubmit={openModal} method="post" className="flex flex-col gap-3">
          <div>
@@ -183,22 +179,18 @@ const Forms = () => {
             />
          </div>
          <div className="flex flex-col sm:flex-row gap-2">
-            <IMaskInput
+            <InputMask
                type="text"
                placeholder="CPF"
-               mask="000.000.000-00"
-               ref={ref}
-               inputRef={inputRef}
+               mask="999.999.999-99"
                minLength={8}
                required
                className="w-full bg-neutral-900 text-white border-neutral-800 rounded-md"
             />
-            <IMaskInput
+            <InputMask
                type="tel"
                placeholder="Celular (com DDD)"
-               mask="(00) 00000-0000"
-               ref={ref}
-               inputRef={inputRef}
+               mask="(99) 99999-9999"
                minLength={8}
                required
                className="w-full bg-neutral-900 text-white border-neutral-800 rounded-md"
@@ -213,12 +205,10 @@ const Forms = () => {
             />
          </div>
          <div className="flex flex-col sm:flex-row gap-2">
-            <IMaskInput
+            <InputMask
                type="text"
                placeholder="CEP"
-               mask="00000-000"
-               ref={ref}
-               inputRef={inputRef}
+               mask="99999-999"
                minLength={8}
                required
                className="w-full bg-neutral-900 text-white border-neutral-800 rounded-md"
