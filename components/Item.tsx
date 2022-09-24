@@ -4,12 +4,15 @@ import Image from "next/image";
 import { useMovieCart } from "@/context/Cart.context";
 import { CloseIcon } from "./Icons";
 
+import NoImage from "../public/noimage.png"
+
 type ItemProps = {
    id: number;
    quantity: number;
 };
 
 export const Item = ({ id, quantity }: ItemProps) => {
+   const [imgError, setImgError] = useState(false)
    const [data, setData]: any = useState(null);
    const [isLoading, setLoading] = useState(false);
    const { removeItem } = useMovieCart();
@@ -36,7 +39,8 @@ export const Item = ({ id, quantity }: ItemProps) => {
       <div className="flex bg-neutral-900 rounded-lg p-2 mb-2 items-center gap-2">
          <div>
             <Image
-               src={`https://image.tmdb.org/t/p/original/${data.backdrop_path}`}
+               src={!imgError ? `https://image.tmdb.org/t/p/original/${data.backdrop_path}` : NoImage}
+               onError={() => setImgError(true)}
                alt={data.title}
                width={128}
                height={72}

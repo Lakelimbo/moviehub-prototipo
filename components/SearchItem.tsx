@@ -1,7 +1,10 @@
+import { useState } from "react";
 import Image from "next/image";
 
 import { useMovieCart } from "@/context/Cart.context";
 import { StarIcon } from "@/components/Icons";
+
+import NoImage from "../public/noimage.png"
 
 type SearchItemProps = {
    id: number;
@@ -18,6 +21,7 @@ const SearchItem = ({
    backdrop_path,
    vote_average,
 }: SearchItemProps) => {
+   const [imgError, setImgError] = useState(false)
    const { getItemQt, raiseQt, decreaseQt, removeItem } = useMovieCart();
    const quantity = getItemQt(id);
 
@@ -29,7 +33,8 @@ const SearchItem = ({
          <div className="flex flex-col text-center md:flex-row md:text-start gap-3">
             <div>
                <Image
-                  src={`https://image.tmdb.org/t/p/original/${backdrop_path}`}
+                  src={!imgError ? `https://image.tmdb.org/t/p/original/${backdrop_path}` : NoImage}
+                  onError={() => setImgError(true)}
                   alt={title}
                   width={128}
                   height={72}
