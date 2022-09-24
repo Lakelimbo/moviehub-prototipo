@@ -18,7 +18,7 @@ const Search = () => {
    useEffect(() => {
       if (!search) return setSearch(".");
       fetch(
-         `https://api.themoviedb.org/3/search/movie?api_key=30afd74ebda9dffa281b3b9016b4aa3c&query=${search}`
+         `https://api.themoviedb.org/3/search/movie?api_key=30afd74ebda9dffa281b3b9016b4aa3c&language=pt-BR&query=${search}`
       )
          .then((res) => res.json())
          .then((data) => {
