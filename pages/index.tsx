@@ -8,7 +8,7 @@ import Logo from "../public/logo.png";
 import Image from "next/image";
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-   const res = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=30afd74ebda9dffa281b3b9016b4aa3c&language=pt-BR&page=1');
+   const res = await fetch(`https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.PUBLIC_TMDB_KEY}&language=pt-BR&page=1`);
    const data = await res.json();
 
    return {
