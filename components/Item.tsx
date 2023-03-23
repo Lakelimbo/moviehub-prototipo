@@ -20,7 +20,7 @@ export const Item = ({ id, quantity }: ItemProps) => {
    useEffect(() => {
       setLoading(true);
       fetch(
-         `https://api.themoviedb.org/3/movie/${id}?api_key=30afd74ebda9dffa281b3b9016b4aa3c&language=pt-BR`
+         `https://api.themoviedb.org/3/movie/${id}?api_key=${import.meta.PUBLIC_TMDB_KEY}&language=pt-BR`
       )
          .then((res) => res.json())
          .then((data) => {
