@@ -1,5 +1,5 @@
 # movieHub - Protótipo
-Este é um protótipo requisitado por DOT digital. Esta documentação também está na página "docs" do app.
+Este é um protótipo foi pedido por uma empresa chamada DOT Digial. Inicialmente eu tinha aplicado à uma posição para desenvolvedor em React fullstack lá e, surpreendentemente, me responderam. Daí pediram esse protótipo como um teste. Fiz tudo bonitinho, até tinha hosteado no Vercel, mas então simplesmente sumiram e nunca mais me contataram. Incrível. Mas ainda deixo o código aberto aqui, apesar de usar uma versão mais antiga do Next.js e do React.
 
 Inicialmente eu estava criando este apenas com o React (ou seja, via  `create-react-app`), porém devido aos massivos resultados da API, estava tendo um grande custo em performance, então movi o projeto pro Next.JS, onde utilizo o React (obviamente) e as calls iniciais pra API são renderizadas no servidor, além de outras coisas como imagem, cache e etc.
 
@@ -18,7 +18,7 @@ Por esta call precisar de input direto do usuário, ela é feita no client.
 
 Ao adicionar um filme ao carrinho, o ícone de bolsa na navbar irá mostrar um símbolo de quantos itens existem no carrinho.  
 Já que existe a possibilidade do usuário adicionar um item pela pesquisa ao invés da página inicial, achei melhor fazer uma call no client para renderizar cada componente dinamicamente sem muita complicação.  
-Outra função do carrinho é que ele mantêm os itens salvos no{" "} `localStorage`, ou seja, ao recarregar a página os itens ainda estarão lá.
+Outra função do carrinho é que ele mantêm os itens salvos no `localStorage`, ou seja, ao recarregar a página os itens ainda estarão lá.
 
 ## Checkout
 
