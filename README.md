@@ -1,7 +1,7 @@
 # movieHub - Protótipo
-Este é um protótipo foi pedido por uma empresa chamada DOT Digial. Inicialmente eu tinha aplicado à uma posição para desenvolvedor em React fullstack lá e, surpreendentemente, me responderam. Daí pediram esse protótipo como um teste. Fiz tudo bonitinho, até tinha hosteado no Vercel, mas então simplesmente sumiram e nunca mais me contataram. Incrível. Mas ainda deixo o código aberto aqui, apesar de usar uma versão mais antiga do Next.js e do React.
+Este é um protótipo que foi pedido por uma empresa chamada DOT Digital. Inicialmente eu tinha aplicado à uma posição para desenvolvedor em React fullstack lá e, surpreendentemente, me responderam. Daí pediram esse protótipo como um teste. Fiz tudo bonitinho, até tinha colocado no Vercel, mas então simplesmente sumiram e nunca mais me contataram. Incrível. Mas ainda deixo o código aberto aqui, apesar de usar uma versão mais antiga do Next.js e do React.
 
-Inicialmente eu estava criando este apenas com o React (ou seja, via  `create-react-app`), porém devido aos massivos resultados da API, estava tendo um grande custo em performance, então movi o projeto pro Next.JS, onde utilizo o React (obviamente) e as calls iniciais pra API são renderizadas no servidor, além de outras coisas como imagem, cache e etc.
+Inicialmente eu estava criando este apenas com o React (ou seja, via  `create-react-app`), porém devido aos massivos resultados da API, estava tendo um grande custo em performance, então movi o projeto pro Next.js, onde utilizo o React (obviamente) e as calls iniciais pra API são renderizadas no servidor, além de outras coisas como imagem, cache e etc.
 
 ## Página inicial
 
